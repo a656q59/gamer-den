@@ -5,6 +5,7 @@ import GameGrid from './components/GameGrid';
 import GenreList from './components/GenreList';
 import {useState} from 'react';
 import { Genre } from './hooks/useGenres';
+import PlaformSelector from './components/PlaformSelector';
 
 
 
@@ -23,7 +24,7 @@ function App() {
       <Show above='lg'>
       <GridItem  area={'side'} paddingX={5}>    <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre)=>setSelectedGenre(genre)}/>  </GridItem>
       </Show>
-      <GridItem  area='main'>    <GameGrid selectedGenre={selectedGenre} />  </GridItem>
+      <GridItem  area='main'> <PlaformSelector/>   <GameGrid selectedGenre={selectedGenre} />  </GridItem>
 
     </Grid>
   )
