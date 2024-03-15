@@ -1,24 +1,16 @@
-import {HStack ,Image, Text} from '@chakra-ui/react';
-import logo from '../assets/eagle.webp';
-import ColorModeSwitch from './ColorModeSwitch';
-import SearchInput from './SearchInput';
+import { HStack, Image, Text } from "@chakra-ui/react";
+import logo from "../assets/eagle.webp";
+import ColorModeSwitch from "./ColorModeSwitch";
+import SearchInput from "./SearchInput";
 
-
-
-interface Props{
-    onSearch:(searchText:string)=>void;
-}
-
-
-
-function NavBar({onSearch}:Props) {
-    return (
-        <HStack padding='10px' >
-            <Image src={logo} boxSize='50px' objectFit='cover'/>
-            <SearchInput onSearch={onSearch}/>
-                <ColorModeSwitch/>
-        </HStack >
-    );
+function NavBar() {
+  return (
+    <HStack padding="10px">
+      <Image src={logo} boxSize="50px" objectFit="cover" />
+      <SearchInput />
+      <ColorModeSwitch />
+    </HStack>
+  );
 }
 
 export default NavBar;
