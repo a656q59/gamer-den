@@ -25,6 +25,7 @@ class APIClient<T> {
   };
 
   get = (id: number | string) => {
+    console.log("============>", id);
     return axiosInstance
       .get<T>(this.endpoint + "/" + id)
       .then((res) => res.data);
